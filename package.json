@@ -1,6 +1,6 @@
 {
   "name": "input-config-test",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Use input with config",
   "type": "module",
   "main": "lib/index.js",
