@@ -1,11 +1,14 @@
 {
   "name": "input-config",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Use input with config",
   "type": "module",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
@@ -13,7 +16,7 @@
     "prepublishOnly": "npm run build"
   },
   "author": "tung.phan",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@rollup/plugin-commonjs": "^24.0.1",
@@ -47,5 +50,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tungpt260794/input-config"
+  },
+  "bugs": {
+    "url": "https://github.com/tungpt260794/input-config/issues"
   }
 }
