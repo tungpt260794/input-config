@@ -1,6 +1,6 @@
 {
   "name": "input-config-test",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use input with config",
   "type": "module",
   "main": "lib/index.js",
@@ -13,7 +13,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "author": "tung.phan",
   "license": "MIT",
