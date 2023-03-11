@@ -1,6 +1,6 @@
 {
   "name": "input-config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use input with config",
   "type": "module",
   "main": "lib/index.js",
@@ -43,5 +43,9 @@
   },
   "dependencies": {
     "classnames": "^2.3.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tungpt260794/input-config"
   }
 }
