@@ -18,4 +18,4 @@ export const Primary = Template.bind({});
 Primary.args = { label: "Primary 😃", size: "large", type: "primary" };
 
 export const Secondary = Template.bind({});
-Secondary.args = { ...Primary.args, type: "secondary", label: "Secondary" };
+Secondary.args = { ...Primary.args, type: "secondary", label: "Secondary 😇" };
