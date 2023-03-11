@@ -1,9 +1,10 @@
 name: Publish Package to npmjs
 on:
-  release:
+  workflow_run:
     branches:
       - main
-    types: [created]
+    release:
+      types: [created]
 jobs:
   build:
     runs-on: ubuntu-latest
