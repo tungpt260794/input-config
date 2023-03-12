@@ -17,6 +17,8 @@ jobs:
         uses: "phips28/gh-action-bump-version@master"
         with:
           tag-prefix: ""
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - run: cat ./package.json
       - run: npm ci
       - run: git config --global user.email "tungpt260794@gmail.com"
