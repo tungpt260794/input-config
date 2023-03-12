@@ -1,20 +1,25 @@
 name: Publish Package to npmjs
 on:
-  release:
-    types: [created]
+  push:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Check package version
-        uses: technote-space/package-version-check-action@v1
-        with:
-          BRANCH_PREFIX: release/
+      - with:
+          ref: ${{ github.ref }}
+      - run: cat ./package.json
       - uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org
+      - name: "Automated Version Bump"
+        uses: "phips28/gh-action-bump-version@master"
+        with:
+          tag-prefix: ""
+      - run: cat ./package.json
       - run: npm ci
       - run: git config --global user.email "tungpt260794@gmail.com"
       - run: git config --global user.name "tungpt260794"
